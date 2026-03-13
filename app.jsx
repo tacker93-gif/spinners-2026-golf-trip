@@ -2,9 +2,9 @@ const { useState, useEffect, useCallback, useRef } = React;
 
 // ─── Supabase Configuration ──────────────────────────────────
 // INSTRUCTIONS: Replace these with your Supabase project values (see setup guide)
-const SUPABASE_URL = "https://wgcrujpmqftelxtutgjr.supabase.co";
+const SUPABASE_URL = "https://zuagjllztelugdalpuic.supabase.co";
 const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndnY3J1anBtcWZ0ZWx4dHV0Z2pyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzMyODUxMDgsImV4cCI6MjA4ODg2MTEwOH0.65Z6in9zU0Fy4LtjuWPyTvrNO-2aHhgJZfjga9yrI5Q";
-const DB_ROW_ID = "spinners-cup-2026";
+const DB_ROW_ID = "spinners-2026-golf-trip";
 
 const supabaseHeaders = {
   "apikey": SUPABASE_KEY,
@@ -15,7 +15,7 @@ const supabaseHeaders = {
 
 async function load() {
   try {
-    if (SUPABASE_URL !== "https://wgcrujpmqftelxtutgjr.supabase.co") {
+    if (SUPABASE_URL !== "https://zuagjllztelugdalpuic.supabase.co") {
       const res = await fetch(
         `${SUPABASE_URL}/rest/v1/app_state?id=eq.${DB_ROW_ID}&select=data`,
         { headers: { "apikey": SUPABASE_KEY, "Authorization": `Bearer ${SUPABASE_KEY}` } }
@@ -31,7 +31,7 @@ async function load() {
 
 async function save(s) {
   try {
-    if (SUPABASE_URL !== "https://wgcrujpmqftelxtutgjr.supabase.co") {
+    if (SUPABASE_URL !== "https://zuagjllztelugdalpuic.supabase.co") {
       await fetch(
         `${SUPABASE_URL}/rest/v1/app_state?id=eq.${DB_ROW_ID}`,
         {
